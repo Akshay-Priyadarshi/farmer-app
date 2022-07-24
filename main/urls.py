@@ -12,5 +12,8 @@ router.register(r'schedules', views.ScheduleViewSet)
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('farmerswithcrops/', views.farmerswithcrops, name='farmerswithcrops'),
+    path('farmerschedule/<uuid:farmer_id>/', views.farmerschedule, name='farmerschedule'),
+    path('totalcost/<uuid:farmer_id>/', views.totalCost, name='totalcost'),
     path('api/', include(router.urls)),
 ]

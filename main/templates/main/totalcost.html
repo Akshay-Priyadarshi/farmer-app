@@ -1,0 +1,58 @@
+{% extends 'main/pagelayout.html' %} {% block content %}
+<div>
+    <h3>Schedule for {{farmer.name}}</h3>
+    {% if schedules|length > 0 %}
+    <table class="schedule-table">
+        <tr>
+            <th>Farm Village</th>
+            <th>Farm Area</th>
+            <th>Fertilizer Name</th>
+            <th>Fertilizer Unit</th>
+            <th>Fertilizer Price/Unit(Rs)</th>
+            <th>No of Units Required</th>
+        </tr>
+        {% for schedule in schedules %}
+        <tr>
+            <td>{{schedule.farm.village}}</td>
+            <td>{{schedule.farm.area}}</td>
+            <td>{{schedule.fertilizer.name}}</td>
+            <td>{{schedule.fertilizer.quantity_unit}}</td>
+            <td>{{schedule.fertilizer.price_per_unit}}</td>
+            <td>{{schedule.quantity}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>Total Cost</th>
+            <td>{{total_cost}}</td>
+        </tr>
+    </table>
+    {% else %}
+    <p class="no-schedule">No Schedule for Today/Tomorrow</p>
+    {% endif %}
+</div>
+<style>
+    .schedule-table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .schedule-table th,
+    .schedule-table td {
+        text-align: left;
+        padding: 8px;
+    }
+    .schedule-table tr:nth-child(1) {
+        background-color: cyan;
+    }
+    .schedule-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .no-schedule {
+        margin: 20px 0;
+    }
+</style>
+{% endblock content %}

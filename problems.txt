@@ -1,0 +1,2 @@
+* Managing dependencies while creating circular dependencies
+* Understanding ORM core filter expressions

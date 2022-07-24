@@ -1,0 +1,49 @@
+{% extends 'main/pagelayout.html' %} {% block content %}
+<div>
+    <h1>Farmers with crops</h1>
+    <table class="farmer-table">
+        <tr>
+            <th>Farmer Name</th>
+            <th>Area</th>
+            <th>Village</th>
+            <th>Crop Grown</th>
+            <th>Schedule</th>
+            <th>Total cost</th>
+        </tr>
+        {% for farm in farms %}
+        <tr>
+            <td>{{farm.farmer.name}}</td>
+            <td>{{farm.area}}</td>
+            <td>{{farm.village}}</td>
+            <td>{{farm.crop.name}}</td>
+            <td>
+                <a href="{% url 'farmerschedule' farm.farmer.id %}"
+                    >Check Schedule</a
+                >
+            </td>
+            <td>
+                <a href="{% url 'totalcost' farm.farmer.id %}">Check Cost</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<style>
+    .farmer-table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .farmer-table th,
+    .farmer-table td {
+        text-align: left;
+        padding: 8px;
+    }
+    .farmer-table tr:nth-child(1) {
+        background-color: cyan;
+    }
+    .farmer-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+{% endblock content %}

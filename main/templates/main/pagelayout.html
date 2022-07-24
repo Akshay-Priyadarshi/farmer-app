@@ -16,14 +16,30 @@
                 font-family: "Roboto", sans-serif;
             }
 
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            ul {
+                list-style: none;
+            }
+
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
             }
+
+            .content {
+                padding: 15px 20px;
+                min-width: 100vw;
+                min-height: 100vh;
+            }
         </style>
     </head>
     <body>
-        {% include 'main/navbar.html' %} {% block content %} {% endblock %}
+        {% include 'main/navbar.html' %}
+        <div class="content">{% block content %} {% endblock %}</div>
     </body>
 </html>

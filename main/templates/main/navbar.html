@@ -1,10 +1,38 @@
 <div class="navbar">
-    <h2>FARMERZ</h2>
+    <h2>
+        <a href="/"><h1 class="logo">FARMERZ</h1></a>
+    </h2>
+    <ul>
+        <li class="menu">
+            <a href="/farmerswithcrops/"><h2 class="menu-item">Farmers</h2></a>
+        </li>
+    </ul>
 </div>
 <style>
     .navbar {
         width: 100%;
-        background-color: skyblue;
-        padding: 20px;
+        background-color: green;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+
+    .logo {
+        font-size: 32px;
+        font-weight: 300;
+        letter-spacing: 5px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-item {
+        font-size: 16px;
+        font-wight: 300;
+        margin-left: 20px;
     }
 </style>
