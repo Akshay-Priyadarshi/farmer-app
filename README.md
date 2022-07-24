@@ -31,3 +31,9 @@
     _Here PORT = 8080, You can specify the PORT no of your choice here_
 
 1. Navigate to **_localhost:8080/admin_** for the admin login and **_localhost:8080/_** for the actual application in the web browser.
+
+### Attached ERD
+
+---
+
+![ERD](ERD.png)
