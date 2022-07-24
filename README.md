@@ -32,6 +32,22 @@
 
 1. Navigate to **_localhost:8080/admin_** for the admin login and **_localhost:8080/_** for the actual application in the web browser.
 
+1. **This application is dockerized so you can easily just run it in a dockerized mode**
+
+    For that all you need is to run -
+
+    ```CMD
+    docker-compose run web python manage.py makemigrations
+    ```
+
+    ```CMD
+    docker-compose run web python manage.py migrate
+    ```
+
+    ```CMD
+    docker-compose up
+    ```
+
 ### Attached ERD
 
 ---

@@ -1,4 +1,3 @@
-from msilib.schema import Class
 from tokenize import Name
 from rest_framework import serializers
 from .models import Farmer,Crop,Fertilizer,Farm,Schedule
